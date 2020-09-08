@@ -1,5 +1,3 @@
-require('dotenv').config();
+require('dotenv').config()
 
-module.exports = {
-   mongoUrl: process.env.MONGOURL_TEST
-};
+module.exports = {}
