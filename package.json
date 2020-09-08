@@ -1,0 +1,64 @@
+{
+   "name": "runcode",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "engines": {
+      "node": "8.11.3",
+      "npm": "6.4.1"
+   },
+   "scripts": {
+      "test": "jest --watch --verbose",
+      "start": "node index.js",
+      "my-start": "node dotenv/config index.js",
+      "server": "nodemon dotenv/config index.js",
+      "delete": "node utils/clean.js ../frontend/build",
+      "deleteTesty": "node utils/clean.js ./daneDoTestow",
+      "generateData": "node utils/downloadFile.js",
+      "server-forever": "nohup nodemon dotenv/config index.js &"
+   },
+   "author": "Filip Krakowiak",
+   "license": "MIT",
+   "dependencies": {
+      "body-parser": "^1.18.3",
+      "concurrently": "^4.0.1",
+      "config": "^2.0.1",
+      "date-fns": "^1.30.1",
+      "debug": "^4.0.1",
+      "dotenv": "^6.0.0",
+      "express": "^4.16.3",
+      "express-async-errors": "^3.0.0",
+      "lru-cache": "^5.1.1",
+      "mongoose": "^5.2.15",
+      "mysql": "^2.16.0",
+      "underscore": "^1.9.1",
+      "underscore.string": "^3.3.5",
+      "validator": "^10.8.0",
+      "winston": "^2.4.0"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.4.0",
+      "@babel/plugin-proposal-class-properties": "^7.4.0",
+      "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+      "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+      "@babel/plugin-transform-runtime": "^7.4.0",
+      "@babel/preset-env": "^7.4.2",
+      "@babel/preset-react": "^7.0.0",
+      "babel-core": "^6.26.3",
+      "babel-jest": "^24.5.0",
+      "jest": "^24.4.0",
+      "nodemon": "^1.18.4",
+      "regenerator-runtime": "^0.13.2",
+      "supertest": "^4.0.0",
+      "ts-jest": "^24.0.0"
+   },
+   "jest": {
+      "testPathIgnorePatterns": [
+         "<rootDir>/client/",
+         "<rootDir>/config/"
+      ],
+      "setupFilesAfterEnv": [
+         "<rootDir>/jest.setup.js"
+      ]
+   }
+}
