@@ -1,9 +1,10 @@
 const express = require('express')
-require('dotenv').config()
-//const debug = require('debug')('app:startup');
-const app = express()
 const winston = require('winston')
 const path = require('path')
+
+require('dotenv').config()
+
+const app = express()
 
 require('./utils/consoleLog')
 require('express-async-errors')
