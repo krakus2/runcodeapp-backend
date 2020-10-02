@@ -21,6 +21,9 @@ const options = {
 
 const cache = new LRU(options)
 
+const RUNCODE_ACCESS_TOKEN_KEY = 'X-RunCode-Access'
+const RUNCODE_ACCESS_TOKEN_VALUE = 'RUNCODE'
+
 // @route   GET api/tests
 // @desc    get tasks from sql database
 // @access  Public
